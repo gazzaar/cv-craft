@@ -1,10 +1,12 @@
-import { useState } from 'react';
-import './App.css';
+import './styles/App.css';
+import Edit from './components/Edit';
+import Preview from './components/Preview';
 
 function App() {
   return (
     <>
-      <h1>CV Craft</h1>
+      <Edit />
+      <Preview />
     </>
   );
 }
