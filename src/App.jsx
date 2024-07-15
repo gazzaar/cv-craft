@@ -1,13 +1,15 @@
 import './styles/App.css';
-import Edit from './components/Edit';
-import Preview from './components/Preview';
+import GeneralInfo from './components/GeneralInfo';
+import Education from './components/Education';
+import Experience from './components/Experience';
 
 function App() {
   return (
-    <>
-      <Edit />
-      <Preview />
-    </>
+    <div className='app'>
+      <GeneralInfo />
+      <Education />
+      <Experience />
+    </div>
   );
 }
 
