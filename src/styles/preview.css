@@ -1,0 +1,30 @@
+.preview {
+  align-self: flex-start;
+  background-color: #111827;
+  padding: 2rem;
+  border-radius: 4px;
+}
+.personal-info h1,
+.personal-info .headline {
+  text-align: center;
+}
+.personal-info h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+.personal-info .headline {
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.6rem;
+}
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

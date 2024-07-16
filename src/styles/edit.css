@@ -1,10 +1,4 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  justify-items: space-between;
-  gap: 2rem;
-}
-.header-general-info {
+.header {
   align-self: flex-start;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -41,7 +35,8 @@ input {
   border: 1px solid #111827;
   margin-bottom: 1.2rem;
 }
-input[id='city'] {
+input[id='address'],
+input[id='location'] {
   margin-bottom: 0;
 }
 
@@ -50,33 +45,14 @@ input:focus {
   border: 1px solid #f9fafb;
 }
 
-.preview {
+.form .date-container {
   align-self: flex-start;
-  background-color: #111827;
-  padding: 2rem;
-  border-radius: 4px;
-}
-.preview h1,
-.preview .headline {
-  text-align: center;
-}
-.preview h1 {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-}
-.preview .headline {
-  font-size: 1.8rem;
-  margin-bottom: 1.4rem;
-}
-.personal-info {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 1.6rem;
+  justify-content: space-between;
+  width: 90%;
+  gap: 1.5rem;
 }
-.personal-info p {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+
+.date-container div input {
+  width: 100%;
 }
