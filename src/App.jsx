@@ -19,7 +19,8 @@ function App() {
     degree: 'Bachelor',
     dateRange: 'Sep 2021 - Jun 2025',
     location: 'Floridda',
-    summary: '',
+    summary:
+      'In-depth coursework in algorithms, data structures, software engineering, and database systems.',
   });
   const [experienceInfo, setExperienceInfo] = useState({});
   return (

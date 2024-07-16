@@ -1,8 +1,16 @@
 .preview {
   align-self: flex-start;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 3px 0 rgb(0 0 0 / 0.1),
+    0 1px 2px -1px rgb(0 0 0 / 0.1);
+  background-color: white;
+  min-height: 100vh;
+}
+.personal-info {
   background-color: #111827;
   padding: 2rem;
-  border-radius: 4px;
 }
 .personal-info h1,
 .personal-info .headline {
@@ -27,4 +35,56 @@
   display: flex;
   align-items: center;
   gap: 5px;
+}
+.education-info {
+  padding: 2rem;
+  color: #111827;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  border-bottom: 2px solid #111827;
+}
+.education-header {
+  font-size: 2rem;
+  grid-row: 1/ -1;
+  grid-column: 1/2;
+}
+.institution-name {
+  grid-column: 2/3;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.area-of-study {
+  grid-column: 2/3;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.date {
+  grid-column: 4;
+  grid-row: 1;
+  font-weight: 600;
+}
+.date,
+.location,
+.degree {
+  text-align: right;
+  font-size: 1.8rem;
+}
+.location {
+  grid-column: 4;
+  grid-row: 3;
+  display: flex;
+  align-items: flex-start;
+  justify-self: flex-end;
+  gap: 5px;
+}
+.degree {
+  grid-column: 4;
+  grid-row: 2;
+  font-style: italic;
+}
+
+.summary {
+  padding-left: 1em;
+  grid-column: 2/-1;
+  font-size: 2rem;
 }

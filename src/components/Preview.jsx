@@ -5,7 +5,8 @@ import '../styles/preview.css';
 
 const Preview = ({ personalInfo, educationInfo, experienceInfo }) => {
   const { name, headline, email, phone, address } = personalInfo;
-  const { schoolName, degree, startDate, endDate, location } = educationInfo;
+  const { institution, areaOfStudy, degree, dateRange, location, summary } =
+    educationInfo;
   return (
     <>
       <div className='preview'>
@@ -43,6 +44,29 @@ const Preview = ({ personalInfo, educationInfo, experienceInfo }) => {
               )}
             </p>
           </div>
+        </div>
+        <div className='education-info'>
+          <h2 className='education-header'>Education</h2>
+          <h3 className='institution-name'>{institution ? institution : ''}</h3>
+          <p className='area-of-study'>{areaOfStudy ? areaOfStudy : ''}</p>
+          <p className='date'>{dateRange ? dateRange : ''} </p>
+          <p className='location'>
+            {location ? (
+              <>
+                <MdOutlineLocationOn /> {location}
+              </>
+            ) : (
+              ''
+            )}
+          </p>
+          <p className='degree'>{degree ? degree : ''} </p>
+          {summary ? (
+            <ul className='summary'>
+              <li>{summary ? summary : ''}</li>
+            </ul>
+          ) : (
+            ''
+          )}
         </div>
       </div>
     </>
