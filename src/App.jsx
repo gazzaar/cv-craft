@@ -14,11 +14,12 @@ function App() {
     address: 'Berlin, Germany',
   });
   const [educationInfo, setEducationInfo] = useState({
-    uniName: 'MIT',
+    institution: 'MIT',
+    areaOfStudy: 'Computer Science',
     degree: 'Bachelor',
-    startDate: '23/4/2020',
-    endDate: '1/7/2025',
+    dateRange: 'Sep 2021 - Jun 2025',
     location: 'Floridda',
+    summary: '',
   });
   const [experienceInfo, setExperienceInfo] = useState({});
   return (

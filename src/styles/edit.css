@@ -16,10 +16,25 @@
   width: 100%;
 }
 input,
-label {
+label,
+textarea {
   font-size: 100%;
   font-family: inherit;
   display: block;
+}
+textarea {
+  resize: vertical;
+  max-height: 100px;
+  min-height: 50px;
+}
+textarea,
+input {
+  width: 95%;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: #f3f4f6;
+  border: 1px solid #111827;
 }
 label {
   font-size: 1.8rem;
@@ -27,32 +42,15 @@ label {
 }
 
 input {
-  width: 90%;
-  font-size: 1.6rem;
-  border-radius: 4px;
-  padding: 8px 12px;
-  background-color: #f3f4f6;
-  border: 1px solid #111827;
   margin-bottom: 1.2rem;
 }
-input[id='address'],
-input[id='location'] {
+
+input[id='address'] {
   margin-bottom: 0;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
   border: 1px solid #f9fafb;
-}
-
-.form .date-container {
-  align-self: flex-start;
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  gap: 1.5rem;
-}
-
-.date-container div input {
-  width: 100%;
 }
