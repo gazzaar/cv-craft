@@ -25,7 +25,7 @@ textarea {
 textarea {
   resize: vertical;
   max-height: 100px;
-  min-height: 70px;
+  min-height: 80px;
 }
 textarea,
 input {
@@ -53,4 +53,10 @@ input:focus,
 textarea:focus {
   outline: none;
   border: 1px solid #f9fafb;
+}
+
+@media only screen and(max-width: 75em) {
+  textarea {
+    min-height: 100px;
+  }
 }

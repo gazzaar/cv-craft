@@ -36,14 +36,18 @@
   align-items: center;
   gap: 5px;
 }
-.education-info {
+.education-info,
+.experience-info {
   padding: 2rem;
   color: #111827;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   border-bottom: 2px solid #111827;
 }
-.education-header {
+.experience-info {
+  border-bottom: none;
+}
+.section-header {
   font-size: 2rem;
   grid-row: 1/ -1;
   grid-column: 1/2;
@@ -52,11 +56,13 @@
   grid-column: 2/3;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  text-transform: capitalize;
 }
-.area-of-study {
+.rule {
   grid-column: 2/3;
   font-size: 2rem;
   margin-bottom: 1rem;
+  text-transform: capitalize;
 }
 .date {
   grid-column: 4;
@@ -65,17 +71,25 @@
 }
 .date,
 .location,
-.degree {
+.degree,
+.align-location {
   text-align: right;
   font-size: 1.8rem;
 }
 .location {
   grid-column: 4;
   grid-row: 3;
+}
+.align-location,
+.location {
   display: flex;
   align-items: flex-start;
   justify-self: flex-end;
   gap: 5px;
+}
+.align-location {
+  grid-column: 4;
+  grid-row: 2;
 }
 .degree {
   grid-column: 4;
@@ -87,4 +101,9 @@
   padding-left: 1em;
   grid-column: 2/-1;
   font-size: 2rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .institution-name {
+    margin-right: 1rem;
+  }
 }
