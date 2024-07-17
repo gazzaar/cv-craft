@@ -2,7 +2,7 @@
 
 - CV generator using reactJS
 
-![Demo](./public/assets/demo.png)
+[![Demo](./public/assets/demo.png)](https://main--gazzar-cv-craft.netlify.app/)
 
 ### Features:
 
