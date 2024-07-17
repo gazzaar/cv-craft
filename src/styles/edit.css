@@ -1,7 +1,6 @@
 .header {
   align-self: flex-start;
   font-size: 2rem;
-  margin-bottom: 2rem;
 }
 .form {
   background-color: #111827;
@@ -59,4 +58,24 @@ textarea:focus {
   textarea {
     min-height: 100px;
   }
+}
+
+.toggle__form.show {
+  max-height: 100%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.6s all ease;
+}
+
+.toggle__form.hide {
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
