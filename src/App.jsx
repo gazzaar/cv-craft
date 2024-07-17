@@ -22,7 +22,14 @@ function App() {
     summary:
       'In-depth coursework in algorithms, data structures, software engineering, and database systems.',
   });
-  const [experienceInfo, setExperienceInfo] = useState({});
+  const [experienceInfo, setExperienceInfo] = useState({
+    company: 'Apple',
+    position: 'Software Engineer',
+    companyDateRange: 'Sep 2023 - Present',
+    jobLocation: 'Silicon Vally',
+    jobSummary:
+      'Designed, developed, and maintained web applications using technologies such as React, Node.js, and Express.',
+  });
   return (
     <div className='app container'>
       <div className='edit-section'>
@@ -34,7 +41,10 @@ function App() {
           educationInfo={educationInfo}
           setEducationInfo={setEducationInfo}
         />
-        <Experience setExperienceInfo={setExperienceInfo} />
+        <Experience
+          experienceInfo={experienceInfo}
+          setExperienceInfo={setExperienceInfo}
+        />
       </div>
       <div className='preview'>
         <Preview
