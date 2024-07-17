@@ -30,18 +30,27 @@ function App() {
     jobSummary:
       'Designed, developed, and maintained web applications using technologies such as React, Node.js, and Express.',
   });
+  const [activePersonalForm, setActivePersonalForm] = useState(true);
+  const [activeEduForm, setEduActiveForm] = useState(false);
+  const [activeExForm, setExActiveForm] = useState(false);
   return (
     <div className='app container'>
       <div className='edit-section'>
         <GeneralInfo
+          isActive={activePersonalForm}
+          setIsActive={setActivePersonalForm}
           personalInfo={personalInfo}
           setPersonalInfo={setPersonalInfo}
         />
         <Education
+          isActive={activeEduForm}
+          setIsActive={setEduActiveForm}
           educationInfo={educationInfo}
           setEducationInfo={setEducationInfo}
         />
         <Experience
+          isActive={activeExForm}
+          setIsActive={setExActiveForm}
           experienceInfo={experienceInfo}
           setExperienceInfo={setExperienceInfo}
         />

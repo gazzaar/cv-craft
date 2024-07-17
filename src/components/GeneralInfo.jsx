@@ -1,13 +1,33 @@
 import '../styles/edit.css';
-const GeneralInfo = ({ personalInfo, setPersonalInfo }) => {
+import { MdToggleOn } from 'react-icons/md';
+import { MdToggleOff } from 'react-icons/md';
+const GeneralInfo = ({
+  personalInfo,
+  setPersonalInfo,
+  isActive,
+  setIsActive,
+}) => {
   const handleChange = (event) => {
     const { id, value } = event.target;
     setPersonalInfo((prevInfo) => ({ ...prevInfo, [id]: value }));
   };
   return (
-    <div>
-      <div className='form'>
+    <div className='form'>
+      <div className='form-header'>
         <h1 className='header'> Personal Details</h1>
+        {isActive ? (
+          <MdToggleOff
+            onClick={() => setIsActive(!isActive)}
+            style={{ fontSize: '3rem', cursor: 'pointer' }}
+          />
+        ) : (
+          <MdToggleOn
+            onClick={() => setIsActive(!isActive)}
+            style={{ fontSize: '3rem', cursor: 'pointer' }}
+          />
+        )}
+      </div>
+      <div className={isActive ? 'toggle__form show' : 'toggle__form hide'}>
         <div>
           <label htmlFor='name'>Full Name:</label>
           <input
